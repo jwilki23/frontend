@@ -1,15 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TopBanner from './blah';
-import MovieList from './Movies';
+import Home from './pages/Home';
+import MovieList from './pages/MovieList';
+import { Link, Route, Routes } from 'react-router-dom';
+import Podcast from './pages/Podcast';
 
 function App() {
   return (
-    <div className="App">
-      <TopBanner saying="Joel Hilton's Movie Collection" />
-      <MovieList />
-    </div>
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/Podcast">Podcast</Link>
+          </li>
+          <li>
+            <Link to="/MovieList">Film Collection</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Podcast" element={<Podcast />} />
+        <Route path="/MovieList" element={<MovieList />} />
+      </Routes>
+    </>
   );
 }
 

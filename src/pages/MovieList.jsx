@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import data from './MovieData.json';
+import data from '../MovieData.json';
 
 const md = data.MovieData;
 
@@ -10,7 +10,7 @@ function MovieList() {
     setListOMovies([
       ...md,
       {
-        MovieId: 1000,
+        MovieId: 6,
         Category: 'Action/Adventure',
         Title: 'Batman Returns',
         Year: 1992,
@@ -34,7 +34,6 @@ function MovieList() {
               <th>Director</th>
               <th>Rating</th>
               <th>Category</th>
-              <th>Edited</th>
             </tr>
           </thead>
           <tbody>
@@ -45,7 +44,6 @@ function MovieList() {
                 <td>{m.Director}</td>
                 <td>{m.Rating}</td>
                 <td>{m.Category}</td>
-                <td>{m.Edited}</td>
               </tr>
             ))}
           </tbody>

@@ -6,9 +6,9 @@ function TopBanner(props: any) {
     <>
       <div className="row">
         <div className="col-2">
-          <img src="./logo192.png" alt="companylogo"></img>
+          <img src="./JoelHiltonHeadshot.jpg" alt="Joel Hilton"></img>
         </div>
-        <div className="col align-self-center text-start">
+        <div className="col align-self-center">
           <h1 className={styles.h1}>{props.saying}</h1>
         </div>
       </div>
